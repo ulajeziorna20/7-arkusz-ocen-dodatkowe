@@ -8,12 +8,9 @@ btnOblicz.addEventListener(`click`, (event) => {
     // console.log(uczniowie);
 
 
-    let wyliczoneSrednie = 0;
-
-
     for (const uczen of uczniowie) {
 
-      
+
 
         // console.log(uczen);
         // console.log(uczen.querySelector(`input.polski`).value);
@@ -84,35 +81,33 @@ btnOblicz.addEventListener(`click`, (event) => {
         // console.log(informatykaOcena);
         // console.log(sredniaOcen);
 
-        let srednie = (matematykaOcena + polskiOcena + biologiaOcena + geografiaOcena + fizykaOcena + chemiaOcena + informatykaOcena) / 7;
-
-        // console.log(srednie);
-
-        
-        wyliczoneSrednie += srednie;
-        // console.log(sredniaOcen);
-         
-
-    //     let spnSrednia = document.querySelector(`span.srednia`);
-    //     // console.log(spnSrednia);    
-    //      spnSrednia.innerText = sredniaOcen;
-
-    }
-
-    console.log(`Srednie to ${wyliczoneSrednie}`);
-
-     
 
 
         let spnSrednie = document.querySelectorAll(`span.srednia`);
-        // console.log(spnSrednie);    
+        // console.log(spnSrednie);
         //  spnSrednia.innerText = sredniaOcen;
+
+        let sredniaOcen = 0;
 
 
         for (const span of spnSrednie) {
-            // console.log(span);
-            span.innerText = wyliczoneSrednie
+
+            sredniaOcen = (matematykaOcena + polskiOcena + biologiaOcena + geografiaOcena + fizykaOcena + chemiaOcena + informatykaOcena) / 7;
+
+            // console.log(sredniaOcen);
+            span.innerText += sredniaOcen;
         }
+
+
+
+        //     let spnSrednia = document.querySelector(`span.srednia`);
+        //     // console.log(spnSrednia);    
+        //      spnSrednia.innerText = sredniaOcen;
+
+    }
+
+    
+
 
 
 })

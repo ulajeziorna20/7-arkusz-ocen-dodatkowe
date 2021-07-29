@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(203, 255, 155);
+}
+
+
+
+h2 {
+    border-bottom: 6px double rgb(51, 48, 48);
+    width: fit-content;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+
+span[class^="tytul"] {
+    margin-right: 1px;
+    border: darkslategrey;
+    border: 1px solid black;
+    padding: 5px;
+   
+}
+
+div#title {
+    margin-bottom: 10px;
+}
+
+
+input[type="text"],
+input[type="number"] {
+    width: 50px;
+    margin-right: 20px;
+    margin-top: 5px;
+   
+}
+
+
+
+#oblicz {
+    margin-top: 15px;
+    color: rgb(12, 11, 10);
+    background-color: rgb(93, 180, 202);
+    font-weight: bold;
+}

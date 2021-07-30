@@ -7,6 +7,8 @@ btnOblicz.addEventListener(`click`, (event) => {
     let uczniowie = document.querySelectorAll(`div[id^="uczen"]`);
     // console.log(uczniowie);
 
+    let sredniaOcen = 0;
+
 
     for (const uczen of uczniowie) {
 
@@ -83,32 +85,34 @@ btnOblicz.addEventListener(`click`, (event) => {
 
 
 
-        let spnSrednie = document.querySelectorAll(`span.srednia`);
+        let spnSrednie = uczen.querySelector(`span[class="srednia"`);
         // console.log(spnSrednie);
         //  spnSrednia.innerText = sredniaOcen;
 
-        let sredniaOcen = 0;
+        // console.log(spnSrednie.innerText);
 
 
-        for (const span of spnSrednie) {
+        sredniaOcen = (matematykaOcena + polskiOcena + biologiaOcena + geografiaOcena + fizykaOcena + chemiaOcena + informatykaOcena) / 7;
 
-            sredniaOcen = (matematykaOcena + polskiOcena + biologiaOcena + geografiaOcena + fizykaOcena + chemiaOcena + informatykaOcena) / 7;
+        // console.log(sredniaOcen);
+        spnSrednie.innerText = sredniaOcen;
 
-            // console.log(sredniaOcen);
-            span.innerText += sredniaOcen;
+
+        if (spnSrednie.innerText >= 4.75) {
+            uczen.style.backgroundColor = `green`;
         }
 
 
 
-        //     let spnSrednia = document.querySelector(`span.srednia`);
-        //     // console.log(spnSrednia);    
-        //      spnSrednia.innerText = sredniaOcen;
+        let oceny = [matematykaOcena, polskiOcena, biologiaOcena, geografiaOcena, fizykaOcena, chemiaOcena, informatykaOcena];
+        // console.log(oceny);
+
+        
+        if (oceny.includes(1)) {
+            uczen.style.backgroundColor = `red`;
+        }
 
     }
-
-    
-
-
 
 })
 
